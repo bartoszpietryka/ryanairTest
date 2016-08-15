@@ -1,0 +1,269 @@
+14 sie 2016 23:17:18,840 INFO  com.bart.test.testSuites.TestSuite1: Before suite class
+14 sie 2016 23:17:18,843 INFO  com.bart.TestTemplate: before script class
+14 sie 2016 23:17:18,852 INFO  com.bart.utils.WebDriverKeeper: Starting browser: Chrome
+14 sie 2016 23:17:18,856 INFO  com.bart.utils.PropertiesKeeper: Properties for test
+14 sie 2016 23:17:18,856 INFO  com.bart.utils.PropertiesKeeper: ShortWait = 3
+LongWait = 6
+StartPage = https://www.ryanair.com/ie/en/
+KeepBrowser=FALSE
+ChromeDriverPath= C:/Users/bart/Downloads/chromedriver.exe
+14 sie 2016 23:17:21,769 INFO  com.bart.utils.PageTemplate: Starting test. info: test01_SimpleBuyTicket[0](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:21,769 INFO  com.bart.TestTemplate: Before test: test01_SimpleBuyTicket[0]   in class: SimpleLogin
+14 sie 2016 23:17:21,770 INFO  com.bart.test.SimpleLogin: Starting test: test01_SimpleBuyTicket
+14 sie 2016 23:17:21,772 INFO  com.bart.pages.StartPage: Navigating to start page
+14 sie 2016 23:17:21,772 INFO  com.bart.utils.WebDriverKeeper: Navigating to URL: https://www.ryanair.com/ie/en/
+14 sie 2016 23:17:26,688 INFO  com.bart.pages.StartPage: Navigating to start page END
+14 sie 2016 23:17:27,280 INFO  com.bart.test.SimpleLogin: Click Dublin
+14 sie 2016 23:17:27,844 INFO  com.bart.test.SimpleLogin: Click Berlin (SXF)
+14 sie 2016 23:17:27,932 INFO  com.bart.pages.StartPage: set Fly Out date
+14 sie 2016 23:17:28,653 INFO  com.bart.pages.StartPage: set Fly Back date
+14 sie 2016 23:17:29,070 INFO  com.bart.pages.StartPage: set number of passangers
+14 sie 2016 23:17:29,561 INFO  com.bart.pages.StartPage: Click lets's go buton
+14 sie 2016 23:17:29,717 INFO  com.bart.pages.ChooseFlight: Waiting for Choose Flight page to load
+14 sie 2016 23:17:36,295 ERROR com.bart.test.SimpleLogin: Exception encountered in script: test01_SimpleBuyTicket . Exception class : org.openqa.selenium.TimeoutException
+14 sie 2016 23:17:36,295 INFO  com.bart.test.SimpleLogin: Ending test: test01_SimpleBuyTicket
+14 sie 2016 23:17:36,296 INFO  com.bart.TestTemplate: After test test01_SimpleBuyTicket[0]   in class: SimpleLogin
+14 sie 2016 23:17:36,302 ERROR com.bart.utils.PageTemplate: Failed test. info: 
+test01_SimpleBuyTicket[0](com.bart.test.SimpleLogin)
+Timed out after 6 seconds waiting for presence of element located by: By.xpath: //button[@id="continue"]
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'bart-w8', ip: '192.168.1.5', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129), userDataDir=C:\Users\bart\AppData\Local\Temp\scoped_dir4436_18705}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fe17e5c42dd1f22ec6e8ecd2dfd8444e
+org.openqa.selenium.TimeoutException: Timed out after 6 seconds waiting for presence of element located by: By.xpath: //button[@id="continue"]
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'bart-w8', ip: '192.168.1.5', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129), userDataDir=C:\Users\bart\AppData\Local\Temp\scoped_dir4436_18705}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fe17e5c42dd1f22ec6e8ecd2dfd8444e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at com.bart.utils.WebDriverKeeper.waitForElementByXPath(WebDriverKeeper.java:183)
+	at com.bart.pages.ChooseFlight.waitForPageToLoad(ChooseFlight.java:25)
+	at com.bart.pages.ChooseFlight.<init>(ChooseFlight.java:19)
+	at com.bart.pages.StartPage.clickLetsGo(StartPage.java:199)
+	at com.bart.test.SimpleLogin.test01_SimpleBuyTicket(SimpleLogin.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id="continue"]"}
+  (Session info: chrome=52.0.2743.116)
+  (Driver info: chromedriver=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'bart-w8', ip: '192.168.1.5', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.23.409699 (49b0fa931cda1caad0ae15b7d1b68004acd05129), userDataDir=C:\Users\bart\AppData\Local\Temp\scoped_dir4436_18705}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fe17e5c42dd1f22ec6e8ecd2dfd8444e
+*** Element info: {Using=xpath, value=//button[@id="continue"]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 54 more
+14 sie 2016 23:17:36,308 INFO  com.bart.utils.PageTemplate: Finished test. info: test01_SimpleBuyTicket[0](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:36,312 INFO  com.bart.utils.WebDriverKeeper: Closing browser
+14 sie 2016 23:17:37,273 INFO  com.bart.utils.WebDriverKeeper: Window closed
+14 sie 2016 23:17:37,274 INFO  com.bart.utils.WebDriverKeeper: Starting browser: Chrome
+14 sie 2016 23:17:39,133 INFO  com.bart.utils.PageTemplate: Starting test. info: test02_TestWithException[0](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:39,134 INFO  com.bart.TestTemplate: Before test: test02_TestWithException[0]   in class: SimpleLogin
+14 sie 2016 23:17:39,134 INFO  com.bart.test.SimpleLogin: Starting test: test02_TestWithException
+14 sie 2016 23:17:39,134 INFO  com.bart.pages.StartPage: Navigating to start page
+14 sie 2016 23:17:39,134 INFO  com.bart.utils.WebDriverKeeper: Navigating to URL: https://www.ryanair.com/ie/en/
+14 sie 2016 23:17:44,113 INFO  com.bart.pages.StartPage: Navigating to start page END
+14 sie 2016 23:17:44,120 INFO  com.bart.test.SimpleLogin: Expecting message: BAD LUCK
+14 sie 2016 23:17:44,120 INFO  com.bart.pages.StartPage: Throw exception
+14 sie 2016 23:17:44,121 ERROR com.bart.test.SimpleLogin: Exception encountered in script: test02_TestWithException . Exception class : com.bart.exceptions.ExpectedException
+14 sie 2016 23:17:44,121 INFO  com.bart.test.SimpleLogin: Ending test: test02_TestWithException
+14 sie 2016 23:17:44,121 INFO  com.bart.TestTemplate: After test test02_TestWithException[0]   in class: SimpleLogin
+14 sie 2016 23:17:44,125 INFO  com.bart.utils.PageTemplate: Succeeded test. info: test02_TestWithException[0](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:44,125 INFO  com.bart.utils.PageTemplate: Finished test. info: test02_TestWithException[0](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:44,125 INFO  com.bart.utils.WebDriverKeeper: Closing browser
+14 sie 2016 23:17:44,881 INFO  com.bart.utils.WebDriverKeeper: Window closed
+14 sie 2016 23:17:44,881 INFO  com.bart.utils.WebDriverKeeper: Starting browser: Firefox
+14 sie 2016 23:17:52,358 INFO  com.bart.utils.PageTemplate: Starting test. info: test01_SimpleBuyTicket[1](com.bart.test.SimpleLogin)
+14 sie 2016 23:17:52,358 INFO  com.bart.TestTemplate: Before test: test01_SimpleBuyTicket[1]   in class: SimpleLogin
+14 sie 2016 23:17:52,358 INFO  com.bart.test.SimpleLogin: Starting test: test01_SimpleBuyTicket
+14 sie 2016 23:17:52,359 INFO  com.bart.pages.StartPage: Navigating to start page
+14 sie 2016 23:17:52,359 INFO  com.bart.utils.WebDriverKeeper: Navigating to URL: https://www.ryanair.com/ie/en/
+14 sie 2016 23:17:59,666 INFO  com.bart.pages.StartPage: Navigating to start page END
+14 sie 2016 23:18:00,564 INFO  com.bart.test.SimpleLogin: Click Dublin
+14 sie 2016 23:18:01,625 INFO  com.bart.test.SimpleLogin: Click Berlin (SXF)
+14 sie 2016 23:18:01,886 INFO  com.bart.pages.StartPage: set Fly Out date
+14 sie 2016 23:18:03,030 INFO  com.bart.pages.StartPage: set Fly Back date
+14 sie 2016 23:18:04,052 INFO  com.bart.pages.StartPage: set number of passangers
+14 sie 2016 23:18:04,955 INFO  com.bart.pages.StartPage: Click lets's go buton
+14 sie 2016 23:18:06,333 INFO  com.bart.pages.ChooseFlight: Waiting for Choose Flight page to load
+14 sie 2016 23:18:14,411 INFO  com.bart.test.SimpleLogin: Outbound price€ 164.99
+14 sie 2016 23:18:15,396 INFO  com.bart.test.SimpleLogin: inbound price€ 223.99
+14 sie 2016 23:18:16,167 INFO  com.bart.pages.ChooseFlight: Click continue buton
+14 sie 2016 23:18:16,469 INFO  com.bart.pages.Extras: Waiting for Extras page to load
+14 sie 2016 23:18:19,572 INFO  com.bart.pages.Extras: Click checkout buton
+14 sie 2016 23:18:24,872 INFO  com.bart.pages.Extras: popup window is presented
+14 sie 2016 23:18:25,157 INFO  com.bart.pages.Payment: Waiting for Payment page to load
+14 sie 2016 23:18:29,012 INFO  com.bart.pages.Payment: Fill passanger details
+14 sie 2016 23:18:29,012 INFO  com.bart.pages.Payment: Filling Tiltle Mr
+14 sie 2016 23:18:29,565 INFO  com.bart.pages.Payment: Filling name James
+14 sie 2016 23:18:29,902 INFO  com.bart.pages.Payment: Filling Surname Bond
+14 sie 2016 23:18:30,118 INFO  com.bart.pages.Payment: Fill passanger details
+14 sie 2016 23:18:30,118 INFO  com.bart.pages.Payment: Filling Tiltle Mrs
+14 sie 2016 23:18:30,595 INFO  com.bart.pages.Payment: Filling name Lara
+14 sie 2016 23:18:30,824 INFO  com.bart.pages.Payment: Filling Surname Croft
+14 sie 2016 23:18:31,067 INFO  com.bart.pages.Payment: Fill contact details
+14 sie 2016 23:18:31,067 INFO  com.bart.pages.Payment: Filling email bond@gmail.com
+14 sie 2016 23:18:31,350 INFO  com.bart.pages.Payment: Filling confirm email bond@gmail.com
+14 sie 2016 23:18:31,622 INFO  com.bart.pages.Payment: Filling country Germany
+14 sie 2016 23:18:32,082 INFO  com.bart.pages.Payment: Filling phone 111111111
+14 sie 2016 23:18:33,038 INFO  com.bart.pages.Payment: Fill Credit Card details
+14 sie 2016 23:18:33,038 INFO  com.bart.pages.Payment: Filling cardNumber 5555 5555 5555 5557
+14 sie 2016 23:18:33,562 INFO  com.bart.pages.Payment: Filling cardType MasterCard
+14 sie 2016 23:18:34,187 INFO  com.bart.pages.Payment: Filling expiryMonth 11
+14 sie 2016 23:18:34,737 INFO  com.bart.pages.Payment: Filling expiryYear 2020
+14 sie 2016 23:18:35,327 INFO  com.bart.pages.Payment: Filling CVV000
+14 sie 2016 23:18:35,493 INFO  com.bart.pages.Payment: Filling name James Bond
+14 sie 2016 23:18:35,761 INFO  com.bart.pages.Payment: Fill Credit Card details
+14 sie 2016 23:18:35,761 INFO  com.bart.pages.Payment: Filling address1 adress 1
+14 sie 2016 23:18:35,981 INFO  com.bart.pages.Payment: Filling address2 adress 2
+14 sie 2016 23:18:36,210 INFO  com.bart.pages.Payment: Filling city Munich
+14 sie 2016 23:18:36,605 INFO  com.bart.pages.Payment: Filling zip 555-555
+14 sie 2016 23:18:36,853 INFO  com.bart.pages.Payment: Filling country Germany
+14 sie 2016 23:18:38,260 WARN  com.bart.test.SimpleLogin: Validation errorCard number is too short
+14 sie 2016 23:18:38,260 INFO  com.bart.test.SimpleLogin: Ending test: test01_SimpleBuyTicket
+14 sie 2016 23:18:38,260 INFO  com.bart.TestTemplate: After test test01_SimpleBuyTicket[1]   in class: SimpleLogin
+14 sie 2016 23:18:38,260 ERROR com.bart.utils.PageTemplate: Failed test. info: 
+test01_SimpleBuyTicket[1](com.bart.test.SimpleLogin)
+Verification errors on payment page
+java.lang.AssertionError: Verification errors on payment page
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at com.bart.test.SimpleLogin.test01_SimpleBuyTicket(SimpleLogin.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+14 sie 2016 23:18:38,261 INFO  com.bart.utils.PageTemplate: Finished test. info: test01_SimpleBuyTicket[1](com.bart.test.SimpleLogin)
+14 sie 2016 23:18:38,262 INFO  com.bart.utils.WebDriverKeeper: Closing browser
+14 sie 2016 23:18:39,229 INFO  com.bart.utils.WebDriverKeeper: Window closed
+14 sie 2016 23:18:39,229 INFO  com.bart.utils.WebDriverKeeper: Starting browser: Firefox
+14 sie 2016 23:18:47,256 INFO  com.bart.utils.PageTemplate: Starting test. info: test02_TestWithException[1](com.bart.test.SimpleLogin)
+14 sie 2016 23:18:47,257 INFO  com.bart.TestTemplate: Before test: test02_TestWithException[1]   in class: SimpleLogin
+14 sie 2016 23:18:47,257 INFO  com.bart.test.SimpleLogin: Starting test: test02_TestWithException
+14 sie 2016 23:18:47,257 INFO  com.bart.pages.StartPage: Navigating to start page
+14 sie 2016 23:18:47,257 INFO  com.bart.utils.WebDriverKeeper: Navigating to URL: https://www.ryanair.com/ie/en/
+14 sie 2016 23:18:55,080 INFO  com.bart.pages.StartPage: Navigating to start page END
+14 sie 2016 23:18:55,080 INFO  com.bart.test.SimpleLogin: Expecting message: BAD LUCK
+14 sie 2016 23:18:55,081 INFO  com.bart.pages.StartPage: Throw exception
+14 sie 2016 23:18:55,081 ERROR com.bart.test.SimpleLogin: Exception encountered in script: test02_TestWithException . Exception class : com.bart.exceptions.ExpectedException
+14 sie 2016 23:18:55,081 INFO  com.bart.test.SimpleLogin: Ending test: test02_TestWithException
+14 sie 2016 23:18:55,081 INFO  com.bart.TestTemplate: After test test02_TestWithException[1]   in class: SimpleLogin
+14 sie 2016 23:18:55,081 INFO  com.bart.utils.PageTemplate: Succeeded test. info: test02_TestWithException[1](com.bart.test.SimpleLogin)
+14 sie 2016 23:18:55,081 INFO  com.bart.utils.PageTemplate: Finished test. info: test02_TestWithException[1](com.bart.test.SimpleLogin)
+14 sie 2016 23:18:55,082 INFO  com.bart.TestTemplate: After script class
+14 sie 2016 23:18:55,082 INFO  com.bart.utils.WebDriverKeeper: Closing browser
+14 sie 2016 23:18:55,599 INFO  com.bart.utils.WebDriverKeeper: Window closed
+14 sie 2016 23:18:55,599 INFO  com.bart.test.testSuites.TestSuite1: After suite class
