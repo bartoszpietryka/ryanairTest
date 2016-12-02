@@ -88,7 +88,7 @@ public class StartPage extends PageTemplate {
 				"//div[@class=\"core-list-item core-list-item-rounded initial\"]",
 				PropertiesKeeper.getInstance().getPropAsInt("ShortWait"));
 
-		return WebDriverKeeper.getInstance().elementsByXPath("//span[@ng-bind-html]");
+		return WebDriverKeeper.getInstance().elementsByXPath("//div[@class=\"core-list-small\"]/div[@bindonce]");
 	}
 
 	/**
@@ -102,23 +102,25 @@ public class StartPage extends PageTemplate {
 		// timeout
 		WebDriverKeeper.getInstance().waitForElementByXPath("//div[@class=\"core-list-item core-list-item-rounded\"]",
 				PropertiesKeeper.getInstance().getPropAsInt("ShortWait"));
-		return WebDriverKeeper.getInstance().elementsByXPath("//span[@ng-bind-html]");
+		return WebDriverKeeper.getInstance().elementsByXPath("//div[@class=\"core-list-small\"]/div[@bindonce]");
 	}
 
 	protected void setDateFields(WebElement dateInput, String day, String month, String year)
 			throws RyanairTestCommonException {
+
 		if (day != null) {
-			WebElement dd = dateInput.findElement(By.xpath(".//input[@class=\"dd date-input-0\"]"));
+			WebElement dd = dateInput.findElement(By.xpath(".//input[@class=\"dd date-input-0 ng-pristine ng-untouched\"]"));
 			dd.sendKeys(day);
 		}
 		if (month != null) {
-			WebElement mm = dateInput.findElement(By.xpath(".//input[@class=\"mm date-input-1\"]"));
+			WebElement mm = dateInput.findElement(By.xpath(".//input[@class=\"mm date-input-1 ng-pristine ng-untouched\"]"));
 			mm.sendKeys(month);
 		}
 		if (month != null) {
-			WebElement yyyy = dateInput.findElement(By.xpath(".//input[@class=\"yyyy date-input-2\"]"));
+			WebElement yyyy = dateInput.findElement(By.xpath(".//input[@class=\"yyyy date-input-2 ng-pristine ng-untouched\"]"));
 			yyyy.sendKeys(month);
 		}
+		
 	}
 
 	/**
