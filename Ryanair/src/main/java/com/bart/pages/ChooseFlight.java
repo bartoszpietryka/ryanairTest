@@ -18,7 +18,7 @@ import com.bart.utils.WebDriverKeeper;
  * @author bart
  *
  */
-public class ChooseFlightdd extends PageTemplate {
+public class ChooseFlightdd2 extends PageTemplate {
 	private final static Logger log = Logger.getLogger(ChooseFlight.class.getName());
 	
 	public ChooseFlight () throws RyanairTestCommonException{
